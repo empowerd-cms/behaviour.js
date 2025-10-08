@@ -16,6 +16,33 @@
 
 ---
 
+### Usage
+```
+<textarea class="emp_editor">Hello</textarea>
+<textarea class="emp_editor">World</textarea>
+
+<script src="behavior.js"></script>
+<script>
+  // Define behaviors
+  behavior.define('resizeTextarea', el => {
+    el.style.height = 'auto';
+    el.style.height = el.scrollHeight + 'px';
+  });
+
+  behavior.define('addHi', el => el.value += ' -- hi');
+
+  behavior.define('alertClick', el => alert('Clicked!'));
+
+  // Bind behaviors
+  behavior.add('textarea::input,init', 'resizeTextarea'); // auto-resize
+  behavior.add('.emp_editor::myCustomEvent', 'addHi');   // custom event
+  behavior.add('textarea::click', 'alertClick');         // click alert
+
+  // Auto-initialized on DOMContentLoaded
+  // Auto-applied to dynamically added elements
+</script>
+```
+
 ## Progressive Examples
 
 ### 1. Start with a small core behavior
@@ -23,6 +50,7 @@
 ```html
 <textarea class="emp_editor">Hello</textarea>
 
+<script src="behavior.js"></script>
 <script>
 behavior.define('resizeTextarea', el => {
   el.style.height = 'auto';
