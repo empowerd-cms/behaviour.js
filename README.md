@@ -1,4 +1,4 @@
-# behavior.js: Keep JS Libraries Extendible for AI.
+# behavior.js: Keep JavaScript Extendible for AI.
 - Try in the browser or on your phone via https://empowerd.dev CMS!
 
 `behavior.js` makes it easy to use custom vanilla JS and extend your functionality over time, so you can more easily use AI to keep generating new behaviors.
