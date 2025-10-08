@@ -34,7 +34,7 @@
   behavior.define('alertClick', el => alert('Clicked!'));
 
   // Bind behaviors
-  behavior.add('textarea::input,init', 'resizeTextarea'); // auto-resize
+  behavior.add('textarea::input,DOMContentLoaded', 'resizeTextarea'); // auto-resize
   behavior.add('.emp_editor::myCustomEvent', 'addHi');   // custom event
   behavior.add('textarea::click', 'alertClick');         // click alert
 
