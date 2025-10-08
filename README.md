@@ -17,7 +17,7 @@
 ---
 
 ### Usage
-```
+```js
 <textarea class="emp_editor">Hello</textarea>
 <textarea class="emp_editor">World</textarea>
 
